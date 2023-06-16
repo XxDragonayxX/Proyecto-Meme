@@ -12,53 +12,55 @@ light.addEventListener("click", () => {
 });
 
 // *****funcion para que al actualizar página siga con el modo elegido por el usuario*******
-if (valor === 'true') {
-  body.classList.add('modo-light');
+if (valor === "true") {
+  body.classList.add("modo-light");
 } else {
-  body.classList.remove('modo-light');
+  body.classList.remove("modo-light");
 }
 
 //*****************************************************************
 //                  BOTON DESCARGAR MEME
 // *****************************************************************
-const btnDescarga = document.getElementById('button-descarga');
-btnDescarga.addEventListener('click', () =>
-  domtoimage.toBlob(document.getElementById('caja-meme')).then(blob => saveAs(blob, 'Mi-meme.png')))
+const btnDescarga = document.getElementById("button-descarga");
+btnDescarga.addEventListener("click", () =>
+  domtoimage
+    .toBlob(document.getElementById("caja-meme"))
+    .then((blob) => saveAs(blob, "Mi-meme.png"))
+);
 //toBlob: toma el elemeto html, lo convierte en una imagen y duevuelve un objeto
-
 
 // ********************************************************
 // CAMBIO DE COLUMNA IMAGEN A COLUMNA TEXTO CON BOTONES NAV | BOTON CIERRE RESPONSIVE
 // ********************************************************
-const btnImg = document.getElementById('button-text-img');
-const btnText = document.getElementById('button-text-text');
-const panelImagen = document.getElementById('panel-imagen');
-const panelTexto = document.getElementById('panel-texto');
-const btnPanelCierre = document.getElementById('panel-close-button');
+const btnImg = document.getElementById("button-text-img");
+const btnText = document.getElementById("button-text-text");
+const panelImagen = document.getElementById("panel-imagen");
+const panelTexto = document.getElementById("panel-texto");
+const btnPanelCierre = document.getElementById("panel-close-button");
 
-btnImg.addEventListener('click', () => {
+btnImg.addEventListener("click", () => {
   panelImagen.style.display = "block";
   panelTexto.style.display = "none";
-})
+});
 
-btnText.addEventListener('click', () => {
+btnText.addEventListener("click", () => {
   panelImagen.style.display = "none";
   panelTexto.style.display = "block";
-})
+});
 
-btnPanelCierre.addEventListener('click', () => {
+btnPanelCierre.addEventListener("click", () => {
   panelImagen.style.display = "none";
   panelTexto.style.display = "none";
-})
+});
 
 // **********************************
 //         URL INPUT
 // **********************************
 
 const UrlInput = document.getElementById("url-img");
-UrlInput.addEventListener('input', () => {
-  imagen.style = `background-image:url(${UrlInput.value})`
-})
+UrlInput.addEventListener("input", () => {
+  imagen.style = `background-image:url(${UrlInput.value})`;
+});
 
 // ***************************
 // COLOR DE FONDO DE IMAGEN //CAMBIOS SELECT IMAGEN | MEZCLA DE FONDO
