@@ -56,7 +56,6 @@ btnPanelCierre.addEventListener("click", () => {
 // **********************************
 //         URL INPUT
 // **********************************
-
 const UrlInput = document.getElementById("url-img");
 UrlInput.addEventListener("input", () => {
   imagen.style = `background-image:url(${UrlInput.value})`;
